@@ -1,0 +1,54 @@
+# Flutter
+build/
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+*.packages
+pubspec.lock
+
+# iOS/macOS
+ios/Flutter/Flutter.podspec
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.modulemap
+ios/Flutter/GeneratedPluginRegistrant.*
+ios/Pods/
+ios/.symlinks/
+ios/.generated/
+ios/Flutter/flutter_export_environment.sh
+macos/Flutter/GeneratedPluginRegistrant.swift
+macos/Flutter/Flutter-Debug.xcconfig
+macos/Flutter/Flutter-Release.xcconfig
+
+# Android
+android/local.properties
+android/.gradle/
+android/gradle_wrapper.jar
+android/gradlew
+android/gradlew.bat
+android/.gradle/
+android/captures/
+android/gradle/
+android/.idea/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Environment
+.env
+.env.local
+
+# Web
+web/index.html.bak
+
+# Misc
+.dart_tool/
+.packages
+pubspec.lock
+*.iml
+*.lock
