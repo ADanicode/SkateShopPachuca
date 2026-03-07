@@ -1,0 +1,65 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+skinparam shadowing false
+skinparam usecase {
+  BackgroundColor LightBlue
+  BorderColor DarkBlue
+}
+
+actor "Trabajador (Vendedor)" as Vendedor
+actor "Administrador" as Admin
+actor "Consultor" as Consultor
+actor "Sistema\n(FastAPI / Node.js)" as Sistema
+
+rectangle "SkateShopPachuca POS" {
+  
+  ' Modulo Auth
+  usecase "Iniciar Sesión (Google SSO)" as UC1
+  
+  ' Modulo Ventas
+  usecase "Consultar Catálogo" as UC2
+  usecase "Gestionar Carrito de Compras" as UC3
+  usecase "Procesar Venta" as UC4
+  usecase "Elegir Método de Pago" as UC4a
+  
+  ' Modulo Sistema
+  usecase "Validar y Descontar Stock" as UC5
+  usecase "Registrar Ticket en Firestore" as UC5a
+  
+  ' Modulo Admin
+  usecase "Gestionar Usuarios y Roles" as UC6
+  usecase "Gestionar Inventario (Altas/Bajas)" as UC7
+  usecase "Anular Venta" as UC8
+  
+  ' Modulo Reportes
+  usecase "Generar Reporte PDF" as UC9
+}
+
+' Relaciones Vendedor
+Vendedor --> UC1
+Vendedor --> UC2
+Vendedor --> UC3
+Vendedor --> UC4
+
+' Includes de Venta
+UC4 .> UC4a : <<include>>
+UC4 .> UC5 : <<include>>
+UC4 .> UC5a : <<include>>
+
+' Relaciones Sistema
+Sistema --> UC5
+Sistema --> UC5a
+
+' Relaciones Admin
+Admin --> UC1
+Admin --> UC2
+Admin --> UC6
+Admin --> UC7
+Admin --> UC8
+
+' Relaciones Consultor
+Consultor --> UC1
+Consultor --> UC9
+
+@enduml
