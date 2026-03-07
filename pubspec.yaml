@@ -40,6 +40,11 @@ dependencies:
   equatable: ^2.0.5
   http: ^1.1.0
 
+  # Paquetes para autenticación con Firebase y Google
+  firebase_core: ^4.5.0
+  firebase_auth: ^6.2.0
+  google_sign_in: ^6.2.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

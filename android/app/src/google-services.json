@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1051365529659",
+    "project_id": "skateshoppachucadb",
+    "storage_bucket": "skateshoppachucadb.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1051365529659:android:6d9465a26c45144d28a41e",
+        "android_client_info": {
+          "package_name": "com.example.skateshoppachuca"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCVwXn2p_4TTHWh7IkvB_urVN7n0fhzeFw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
